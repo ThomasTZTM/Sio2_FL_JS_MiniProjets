@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Carte d'Anniversaire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carte {
+            display: none;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .animate-zoom {
+            animation: zoomIn 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center mb-4">Générateur de Carte d'Anniversaire</h1>
+                
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <form id="formulaire">
+                            <div class="mb-3">
+                                <label for="prenom" class="form-label">Prénom</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="prenom" 
+                                       placeholder="Entrez un prénom" 
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="couleur" class="form-label">Couleur dominante</label>
+                                <input type="color" 
+                                       class="form-control form-control-color w-100" 
+                                       id="couleur" 
+                                       value="#ff8c00">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" 
+                                          id="message" 
+                                          rows="4" 
+                                          placeholder="Écrivez un message"></textarea>
+                            </div>
+
+                            <button type="button" 
+                                    class="btn btn-primary w-100 fw-bold" 
+                                    id="generer-btn">
+                                Générer la carte
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="carte mt-4" id="carte">
+                    <div class="card shadow">
+                        <div class="card-body d-flex flex-column align-items-center text-center p-5" style="min-height: 400px;">
+                            <h2 class="display-5 mb-4 w-100" id="carte-prenom"></h2>
+                            <img src="https://cdn-icons-png.flaticon.com/512/4213/4213958.png" 
+                                 alt="Cadeau d'anniversaire"
+                                 class="my-4"
+                                 width="120"
+                                 height="120">
+                            <p class="lead mb-0 w-75" id="carte-message"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button class="btn btn-danger w-100 fw-bold" id="reset-btn">
+                        Réinitialiser
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="anniversaire.js"></script>
+</body>
+</html>

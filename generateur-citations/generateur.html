@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Citations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/app.js"></script>
+    <style>
+        #conteneur-citation {
+            min-height: 150px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        #conteneur-citation.cacher {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        #conteneur-citation.montrer {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Générateur de Citations</h1>
+
+        <!-- Options de catégorie -->
+        <div class="card shadow p-4">
+            <div class="mb-3">
+                <label for="categorie" class="form-label">Choisissez une catégorie :</label>
+                <select id="categorie" class="form-select">
+                    <option value="inspiration">Inspiration</option>
+                    <option value="humour">Humour</option>
+                    <option value="philosophie">Philosophie</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Zone d'affichage de la citation -->
+        <div class="card shadow p-4 mt-4">
+            <div id="conteneur-citation" class="text-center mb-3">
+                <p id="texte-citation" class="fs-4 fw-bold">Cliquez sur le bouton pour générer une citation.</p>
+                <p id="auteur-citation" class="fs-5 text-muted">- Auteur</p>
+            </div>
+            <button id="btn-generer" class="btn btn-primary w-100">Générer une Citation</button>
+        </div>
+
+        <!-- Historique des citations -->
+        <div class="card shadow p-4 mt-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3>Historique :</h3>
+                <button id="btn-effacer-historique" class="btn btn-danger">
+                    Effacer l'historique
+                </button>
+            </div>
+            <ul id="historique" class="list-group"></ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="generateur.js"></script>
+</body>
+</html>

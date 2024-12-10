@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Projets JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .project-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Menu de navigation fixe -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-code me-2"></i>
+                Mes Projets
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Navigation rapide
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="horaires/horaires.html">Horaires d'ouverture</a></li>
+                            <li><a class="dropdown-item" href="liste-courses/liste-courses.html">Liste de courses</a></li>
+                            <li><a class="dropdown-item" href="panier/panier.html">Panier d'achat</a></li>
+                            <li><a class="dropdown-item" href="quizz/quizz.html">Quiz</a></li>
+                            <li><a class="dropdown-item" href="convertisseur-mesures/convertisseur-mesures.html">Convertisseur de mesures</a></li>
+                            <li><a class="dropdown-item" href="convertisseur-devises/convertisseur.html">Convertisseur de devises</a></li>
+                            <li><a class="dropdown-item" href="generateur-citations/generateur.html">Générateur de citations</a></li>
+                            <li><a class="dropdown-item" href="simulateur-votes/simulateur.html">Simulateur de votes</a></li>
+                            <li><a class="dropdown-item" href="todos/todos.html">Liste de tâches</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="text-center mb-5">
+            <i class="fas fa-code text-primary me-2"></i>
+            Portfolio de Projets JavaScript
+        </h1>
+
+        <div class="row g-4">
+            <!-- Horaires d'ouverture -->
+            <div class="col-md-6 col-lg-4">
+                <a href="horaires/horaires.html" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-clock project-icon text-primary"></i>
+                            <h3 class="h4 mb-3">Horaires d'Ouverture</h3>
+                            <p class="text-muted">Gérez et affichez les horaires d'ouverture d'un commerce</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Liste de courses -->
+            <div class="col-md-6 col-lg-4">
+                <a href="liste-courses/liste-courses.html" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-shopping-list project-icon text-success"></i>
+                            <h3 class="h4 mb-3">Liste de Courses</h3>
+                            <p class="text-muted">Créez et gérez votre liste de courses interactive</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Panier d'achat -->
+            <div class="col-md-6 col-lg-4">
+                <a href="panier/panier.html" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-shopping-cart project-icon text-info"></i>
+                            <h3 class="h4 mb-3">Panier d'Achat</h3>
+                            <p class="text-muted">Simulez un panier d'achat en ligne</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Quiz -->
+            <div class="col-md-6 col-lg-4">
+                <a href="quizz/quizz.html" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-question-circle project-icon text-warning"></i>
+                            <h3 class="h4 mb-3">Quiz Interactif</h3>
+                            <p class="text-muted">Testez vos connaissances avec ce quiz interactif</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Convertisseur -->
+            <div class="col-md-6 col-lg-4">
+                <a href="convertisseur-mesures/convertisseur-mesures.html" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-exchange-alt project-icon text-danger"></i>
+                            <h3 class="h4 mb-3">Convertisseur</h3>
+                            <p class="text-muted">Convertissez facilement différentes unités de mesure</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Générateur de citations -->
+            <div class="col-md-6 col-lg-4">
+                <a href="generateur-citations/generateur.html" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-quote-right project-icon text-secondary"></i>
+                            <h3 class="h4 mb-3">Générateur de Citations</h3>
+                            <p class="text-muted">Découvrez des citations inspirantes aléatoires</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Convertisseur de devises -->
+            <div class="col-md-6 col-lg-4">
+                <a href="convertisseur-devises/convertisseur.html" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-euro-sign project-icon text-success"></i>
+                            <h3 class="h4 mb-3">Convertisseur de Devises</h3>
+                            <p class="text-muted">Convertissez facilement entre différentes devises</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Simulateur de votes -->
+            <div class="col-md-6 col-lg-4">
+                <a href="simulateur-votes/simulateur.html" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-vote-yea project-icon text-info"></i>
+                            <h3 class="h4 mb-3">Simulateur de Votes</h3>
+                            <p class="text-muted">Simulez un système de vote interactif</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Liste de tâches -->
+            <div class="col-md-6 col-lg-4">
+                <a href="todos/todos.html" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-tasks project-icon text-warning"></i>
+                            <h3 class="h4 mb-3">Liste de Tâches</h3>
+                            <p class="text-muted">Gérez vos tâches quotidiennes</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

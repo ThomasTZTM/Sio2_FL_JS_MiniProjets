@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur d'Unités</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="/app.js"></script>
+    <style>
+        .unite-groupe {
+            position: relative;
+        }
+        .fleche-conversion {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            color: #0d6efd;
+            font-size: 1.5rem;
+        }
+        .resultat-box {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .resultat-box.actif {
+            background-color: #e3f2fd;
+            box-shadow: 0 0 15px rgba(13, 110, 253, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center mb-4">
+                    <i class="fas fa-exchange-alt text-primary me-2"></i>
+                    Convertisseur d'Unités
+                </h1>
+
+                <!-- Formulaire de conversion -->
+                <div class="card shadow-sm p-4">
+                    <form id="convertisseur-form">
+                        <div class="mb-4">
+                            <label for="valeur" class="form-label fw-bold">
+                                <i class="fas fa-calculator text-primary me-2"></i>
+                                Valeur à convertir
+                            </label>
+                            <input type="number" 
+                                   id="valeur" 
+                                   class="form-control form-control-lg" 
+                                   placeholder="Entrez une valeur">
+                        </div>
+
+                        <div class="row position-relative mb-4">
+                            <div class="col-md-5 unite-groupe">
+                                <label for="unite-depart" class="form-label fw-bold">
+                                    <i class="fas fa-arrow-right-from-bracket text-primary me-2"></i>
+                                    Unité de départ
+                                </label>
+                                <select id="unite-depart" class="form-select form-select-lg">
+                                    <option value="metres">Mètres (m)</option>
+                                    <option value="kilometres">Kilomètres (km)</option>
+                                    <option value="grammes">Grammes (g)</option>
+                                    <option value="kilogrammes">Kilogrammes (kg)</option>
+                                    <option value="celsius">Celsius (°C)</option>
+                                    <option value="fahrenheit">Fahrenheit (°F)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-arrow-right-long text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                            <div class="col-md-5 unite-groupe">
+                                <label for="unite-arrivee" class="form-label fw-bold">
+                                    <i class="fas fa-arrow-right-to-bracket text-primary me-2"></i>
+                                    Unité d'arrivée
+                                </label>
+                                <select id="unite-arrivee" class="form-select form-select-lg">
+                                    <option value="metres">Mètres (m)</option>
+                                    <option value="kilometres">Kilomètres (km)</option>
+                                    <option value="grammes">Grammes (g)</option>
+                                    <option value="kilogrammes">Kilogrammes (kg)</option>
+                                    <option value="celsius">Celsius (°C)</option>
+                                    <option value="fahrenheit">Fahrenheit (°F)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="button" id="convertir-btn" class="btn btn-primary btn-lg w-100 mb-2">
+                            <i class="fas fa-sync-alt me-2"></i>
+                            Convertir
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Résultat -->
+                <div class="card shadow-sm p-4 mt-4">
+                    <h3 class="mb-3">
+                        <i class="fas fa-equals text-primary me-2"></i>
+                        Résultat
+                    </h3>
+                    <div id="resultat" class="resultat-box fs-4">
+                        Aucun résultat pour l'instant.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="mesures.js"></script>
+</body>
+</html>
